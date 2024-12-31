@@ -1,0 +1,38 @@
+<div id="id1">
+  <div class="body">
+    <form #userform="ngForm" (ngSubmit)="submit()" class="container">
+      <h1>REGISTRATION FORM</h1>
+      <label>Name:=</label>
+      <input
+        type="text"
+        name="name"
+        required
+        [(ngModel)]="n1"
+        #name="ngModel"
+      />
+      <br />
+      <div *ngIf="name.invalid && name.untouched" class="error">
+        Name is required.
+      </div>
+      <label>Phone num</label>
+      <input
+        type="number"
+        name="phono"
+        [(ngModel)]="phono"
+        #pho="ngModel"
+        pattern="^[0-9]{10}$"
+      />
+      <br />
+      <div *ngIf="pho.invalid">enter correct number</div>
+      <label>Email</label>
+      <input type="email" name="email" [(ngModel)]="email" /><br />
+      <label>password</label>
+      <!-- <div>{{ pho.errors | json }}</div> -->
+      <input type="password" name="password" [(ngModel)]="passw" /><br />
+      <label>Confirm password </label>
+      <input type="password" name="cpassword" [(ngModel)]="cpassw" />
+      <br />
+      <input type="submit" />
+    </form>
+  </div>
+</div>

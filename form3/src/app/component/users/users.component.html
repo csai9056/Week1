@@ -1,0 +1,7 @@
+<h1>welcome {{ id }}</h1>
+<button (click)="get()">GET DETAILS</button>
+<div *ngIf="valid">
+  <h1>Name:{{ data.Name }}</h1>
+  <h1>Email:{{ data.Email }}</h1>
+  <h1>PhoneNumber:{{ data.PhoneNumber }}</h1>
+</div>

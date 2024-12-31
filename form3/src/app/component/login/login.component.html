@@ -1,0 +1,17 @@
+<div>
+  <form #logindata="ngForm" (ngSubmit)="login()">
+    <!-- {{ logindata.value | json }} -->
+    <label>Name:</label>
+    <input
+      type="text"
+      name="name"
+      [(ngModel)]="name1"
+      placeholder="enter u r name"
+    />
+    <br />
+    <label>password:</label>
+    <input type="password" name="password" ngModel [(ngModel)]="password" />
+    <br />
+    <input type="submit" />
+  </form>
+</div>
